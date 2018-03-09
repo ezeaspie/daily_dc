@@ -1,0 +1,131 @@
+* {
+  font-weight: normal; }
+
+body, #stopList,
+#predictions, .stops,
+.predictions {
+  display: flex;
+  flex-direction: column; }
+
+body {
+  align-items: center;
+  width: 100%;
+  background: #F7FFF7;
+  font-size: 1em;
+  margin: 0;
+  padding: 0; }
+
+#map {
+  margin-top: 1em; }
+
+#container {
+  width: 100%; }
+
+#stopList,
+#predictions {
+  font-size: 1em;
+  align-items: center;
+  width: 100%; }
+
+.stops,
+.predictions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.busStop,
+.predictions li {
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  background: #4ECDC4;
+  color: #1A535C;
+  text-align: center;
+  padding: 0 1em;
+  border-radius: 5px;
+  margin: .5em 0;
+  font-family: "Roboto", sans-serif; }
+
+.busStop:hover {
+  cursor: pointer;
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  background: #1A535C;
+  color: #4ECDC4; }
+
+.busStop:active {
+  background: #FFE66D;
+  color: #000; }
+
+#stopList h3,
+#predictions h3 {
+  font-family: "Playfair Display", serif;
+  border: 0;
+  width: 100%;
+  text-align: center;
+  background: #FF6B6B;
+  border-radius: 5px;
+  padding: 1em 0;
+  color: #1A535C;
+  font-size: 1em;
+  font-weight: bold; }
+
+.busStop h4 {
+  font-weight: bold; }
+
+#predictions h4,
+#predictions h5 {
+  font-size: 1.2em; }
+
+.predictions h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold; }
+
+button {
+  border: 0;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin: .5em 0;
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  background: #FFE66D;
+  color: #000;
+  font-size: 1em;
+  font-family: "Playfair Display", serif;
+  font-weight: bold; }
+
+button:hover {
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  background: #d3d3d3;
+  color: #1A535C;
+  cursor: pointer; }
+
+@media screen and (min-width: 400px) {
+  #container {
+    width: 90%; } }
+
+@media screen and (min-width: 800px) {
+  .stops,
+  .predictions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .busStop,
+  .predictions li {
+    min-width: 300px;
+    margin: 5px 0; } }
+
+@media screen and (min-width: 1000px) {
+  .busStop,
+  .predictions li {
+    min-width: 45%; } }

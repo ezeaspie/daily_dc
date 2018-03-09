@@ -1,0 +1,156 @@
+$darkBlue: #1A535C;
+$lightBlue: #4ECDC4;
+$blueWhite: #F7FFF7;
+$red: #FF6B6B;
+$yellow: #FFE66D;
+$playfair: 'Playfair Display', serif;
+$roboto: 'Roboto', sans-serif;
+
+*{
+  font-weight: normal;
+}
+
+%flex-column {
+  display:flex;
+  flex-direction: column;
+}
+
+%flex-row {
+  display:flex;
+  flex-direction: row;
+}
+
+@mixin hoverTransition($color, $background) {
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  background: $background;
+  color: $color;
+}
+
+body{
+  @extend %flex-column;
+  align-items: center;
+  width:100%;
+  background: $blueWhite;
+  font-size: 1em;
+  margin:0;
+  padding:0;
+}
+
+#map {
+  margin-top:1em;
+}
+#container{
+  width:100%;
+}
+
+#stopList,
+#predictions{
+  @extend %flex-column;
+  font-size: 1em;
+  align-items: center;
+  width:100%;
+}
+
+.stops,
+.predictions{
+  @extend %flex-column;
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+.busStop,
+.predictions li {
+  @include hoverTransition($darkBlue, $lightBlue);
+  text-align:center;
+  padding:0 1em;
+  border-radius:5px;
+  margin: .5em 0;
+  font-family: $roboto;
+}
+
+.busStop:hover {
+  cursor: pointer;
+  @include hoverTransition($lightBlue,$darkBlue);
+}
+
+.busStop:active {
+  background: $yellow;
+  color:#000;
+}
+
+#stopList h3,
+#predictions h3 {
+  font-family: $playfair;
+  border:0;
+  width:100%;
+  text-align: center;
+  background: $red;
+  border-radius: 5px;
+  padding: 1em 0;
+  color:$darkBlue;
+  font-size: 1em;
+  font-weight:bold;
+}
+
+.busStop h4 {
+  font-weight:bold;
+}
+
+#predictions h4,
+#predictions h5 {
+  font-size: 1.2em;
+}
+
+.predictions h4 {
+  font-family:$playfair;
+  font-weight:bold;
+}
+
+button {
+  border:0;
+  padding:1em;
+  width:100%;
+  border-radius:5px;
+  margin: .5em 0;
+  @include hoverTransition(#000, $yellow);
+  font-size: 1em;
+  font-family:$playfair;
+  font-weight: bold;
+}
+
+button:hover {
+  @include hoverTransition($darkBlue, #d3d3d3);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 400px) {
+  #container {
+    width:90%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .stops,
+  .predictions {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+  }
+  .busStop,
+  .predictions li {
+    min-width:300px;
+    margin:5px 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .busStop,
+  .predictions li {
+    min-width:45%;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "daily_dc",
+  "version": "1.0.0",
+  "description": "Web app to get current weather, 5 day forecast, and metro bus times",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezeaspie/daily_dc.git"
+  },
+  "author": "Ezequiel Espinoza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezeaspie/daily_dc/issues"
+  },
+  "homepage": "https://github.com/ezeaspie/daily_dc#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
