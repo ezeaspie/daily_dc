@@ -1,6 +1,8 @@
 # daily_dc
 Web app to get current weather, 5 day forecast, and metro bus times
 
+[Live Demo](https://ezeaspie.github.io/daily_dc/dist/index.html)
+
 Next steps:
 
 1. Intergrate the Geolocation function to the metrobus location api. DONE
