@@ -16,7 +16,7 @@ function initMap(){
   let stopsToDisplay = [];
   let options = {
     zoom:17,
-    center:{lat: latitude, lng: longitude}
+    center:{lat: parseFloat(latitude), lng: parseFloat(longitude)}
   }
   const map = new google.maps.Map(document.getElementById('map'), options);
   //Create Markers for Bus Stops
@@ -45,7 +45,7 @@ function initMap(){
   }
   //Display User Current Location
   const userLocation = new google.maps.Marker({
-    position: {lat:latitude, lng: longitude},
+    position: {lat:parseFloat(latitude), lng: parseFloat(longitude)},
     map:map,
     icon: "http://maps.google.com/mapfiles/ms/micons/orange-dot.png"
   });
